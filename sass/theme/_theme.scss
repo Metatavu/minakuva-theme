@@ -59,8 +59,8 @@ body {
 .hero-image-container {
   height:647px;
   width:100%;
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,8 +112,8 @@ body {
 .hero-footer-container {
   height: 444px;
   width:100%;
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,7 +196,7 @@ body {
     a {
       color: #000;
       text-decoration: none;
-      
+
       .social-media-icon {
         border-radius: 50%;
         border: 2px solid #000;
