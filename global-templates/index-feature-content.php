@@ -15,7 +15,7 @@ $frontpage_posts_query = new WP_Query([
 <!-- the loop -->
 <?php while ( $frontpage_posts_query->have_posts() ) : $frontpage_posts_query->the_post(); ?>
   <?php if($postConter < 1) : ?>
-    <div class="row">
+    <div class="row entry-featured-posts">
   <?php endif; ?>
   <div class="col-md-4">
     <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>

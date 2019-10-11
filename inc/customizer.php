@@ -151,6 +151,22 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
       )
     );
 
+    $wp_customize->add_setting('minakuva_footer_small_image_setting', array(
+      //default value
+    ));
+  
+    $wp_customize->add_control(
+      new WP_Customize_Image_Control(
+        $wp_customize,
+        'minakuva_footer_small_img_control',
+        array(
+          'label' => 'Edit small footer image',
+          'settings'  => 'minakuva_footer_small_image_setting',
+          'section'   => 'minakuva_footer_section'
+        )
+      )
+    );
+
     $wp_customize->add_setting('minakuva_footer_text_setting', array(
       //default value
     ));
@@ -197,6 +213,40 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
           'label' => 'Footer button url',
           'section' => 'minakuva_footer_section',
           'settings' => 'minakuva_footer_button_url_setting',
+          'type' => 'url'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_footer_facebook_url_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_facebook_url_setting_control',
+        array(
+          'label' => 'Facebook url',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_facebook_url_setting',
+          'type' => 'url'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_footer_instagram_url_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_instagram_url_setting_control',
+        array(
+          'label' => 'Instagram url',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_instagram_url_setting',
           'type' => 'url'
         )
       )

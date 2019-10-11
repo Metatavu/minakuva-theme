@@ -1,13 +1,37 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 .index-entry-title {
   text-align: center;
-  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 0;
+  font-size: 30px;
+}
+
+.entry-content {
+  font-size: 15px;
+  padding-bottom: 60px;
+}
+
+.entry-featured-posts {
+  .wp-post-image {
+    height: 256px;
+  }
 }
 
 .index-featured-post-title {
-  padding-top: 15px;
+  padding-top: 30px;
   padding-bottom: 15px;
   font-size: 24px;
+}
+
+body {
+  p {
+    font-size: 15px;
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
 }
 
 #wrapper-footer-full {
@@ -15,9 +39,207 @@
 }
 
 .jumbotron.minakuva-footer {
-  height: 300px;
+  height: 444px;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   color: #fff;
+}
+
+#main-menu.navbar-nav {
+  .menu-item {
+    .nav-link {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.hero-image-container {
+  height:647px;
+  width:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-content-container{
+  width: auto;
+  text-align: center;
+
+  .hero-banner-button.btn {
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 5px;
+
+    &.btn-light {
+      color: #000;
+      background-color: #fff;
+    }
+
+    &.btn-dark {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.hero-banner-title {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 110px;
+  line-height: 130px;
+  color: #fff;
+}
+
+.hero-banner-subtitle {
+  line-height: 130px;
+  color: #fff;
+  font-size: 27px;
+  line-height: 33px;
+  padding-top: 11px;
+  padding-bottom: 35px;
+}
+
+
+.hero-footer-container {
+  height: 444px;
+  width:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-footer-content-container{
+  width: auto;
+
+  .container-narrow {
+    max-width: 900px;
+  }
+
+  .hero-footer-button.btn {
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 5px;
+
+    &.btn-light {
+      color: #000;
+      background-color: #fff;
+    }
+
+    &.btn-dark {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.hero-footer-title {
+  font-size: 30px;
+  line-height: 37px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.footer-small-image {
+  height: auto;
+  width: 100%;
+  margin-top: 100px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+#wrapper-footer-full.wrapper {
+  background-color: #fff;
+  padding-top: 40px;
+
+  .menu-footer-container {
+    max-width: 900px;
+    margin-left: auto;
+
+    #menu-footer {
+      list-style-type: none;
+      columns: 3;
+
+      .menu-item {
+        a {
+          font-size: 13px;
+          line-height: 30px;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.footer-credits-container {
+  padding-top: 40px;
+  padding-bottom: 100px;
+
+  .social-media-icons-container {
+    text-align: center;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      
+      .social-media-icon {
+        border-radius: 50%;
+        border: 2px solid #000;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+
+        .fa-instagram {
+          position: absolute;
+          margin-left: -9px;
+          margin-top: 3px;
+          font-size: 22px;
+        }
+
+        .fa-facebook {
+          position: absolute;
+          margin-left: -7px;
+          margin-top: 4px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .copyright-container {
+    padding-top: 20px;
+    text-align: center;
+
+    .copyright-text {
+      font-size: 12px;
+      color: #000;
+    }
+  }
+
+  .mt-container {
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+
+    .mt-link {
+      text-decoration: none;
+      font-size: 12px;
+      color: #000;
+    }
+  }
 }
