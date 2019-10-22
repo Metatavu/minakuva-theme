@@ -9,13 +9,20 @@
 
 .entry-content {
   font-size: 15px;
-  padding-bottom: 60px;
+  padding-bottom: 15px;
 }
 
 .entry-featured-posts {
+  margin: 0px;
   .wp-post-image {
+    object-fit: cover;
     height: 256px;
   }
+}
+
+.card-featured-col {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .index-featured-post-title {
@@ -47,6 +54,29 @@ body {
       font-weight: 400;
     }
   }
+}
+
+.page-image-container {
+  height: 400px;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.page-banner-content-container{
+  width: auto;
+}
+
+.page-entry-title {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 0;
+  font-size: 30px;
+  color: #fff;
 }
 
 .hero-image-container {
@@ -83,6 +113,13 @@ body {
       background-color: #000;
     }
   }
+}
+
+.hero-banner-title-single {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 70px;
+  line-height: 130px;
+  color: #fff;
 }
 
 .hero-banner-title {
@@ -234,5 +271,28 @@ body {
       font-size: 12px;
       color: #000;
     }
+  }
+}
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footer-grid-item {
+  padding: 5px;
+}
+@media (max-width: 670px){
+  .footer-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .hero-footer-button-container{
+  padding: auto;
+  }
+  .hero-banner-title-single {
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
   }
 }

@@ -17,12 +17,14 @@ $frontpage_posts_query = new WP_Query([
   <?php if($postConter < 1) : ?>
     <div class="row entry-featured-posts">
   <?php endif; ?>
-  <div class="col-md-4">
-    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-    <?php the_title('<h3 class="index-featured-post-title">', '</h3>'); ?>
-    <p>
-      <?php the_content() ?>
-    </p>
+  <div class="col-md-4 card-featured-col">
+    <a href="<?php echo get_permalink(); ?>">
+      <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+      <?php the_title('<h3 class="index-featured-post-title">', '</h3>'); ?>
+      <p>
+        <?php echo wp_trim_words( get_the_content(), 9, '...' ); ?>
+      </p>
+    </a>
   </div>
   <?php $postConter++; ?>
   <?php if($postConter == 3) : ?>

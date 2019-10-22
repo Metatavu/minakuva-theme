@@ -129,6 +129,134 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
         )
       )
     );
+ 
+    /* HERO settings ********/
+
+    $wp_customize->add_section('minakuva_hero_section', array(
+      'title' => 'Hero',
+      'description'   => 'Update hero image'
+    ));
+
+    $wp_customize->add_setting('minakuva_hero_image_setting', array(
+      //default value
+    ));
+  
+    $wp_customize->add_control(
+      new WP_Customize_Image_Control(
+        $wp_customize,
+        'minakuva_hero_img_control',
+        array(
+          'label' => 'Edit hero image',
+          'settings'  => 'minakuva_hero_image_setting',
+          'section'   => 'minakuva_hero_section'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_title', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_title',
+        array(
+          'label' => 'Hero title',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_title',
+          'type' => 'textarea'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_text_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_text_control',
+        array(
+          'label' => 'Hero text',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_text_setting',
+          'type' => 'textarea'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_button1_text_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_button1_text_control',
+        array(
+          'label' => 'First button text',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_button1_text_setting',
+          'type' => 'text'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_button1_url_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_button1_url_control',
+        array(
+          'label' => 'First button url',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_button1_url_setting',
+          'type' => 'url'
+        )
+      )
+    );
+
+    
+    $wp_customize->add_setting('minakuva_hero_button2_text_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_button2_text_control',
+        array(
+          'label' => 'Second button text',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_button2_text_setting',
+          'type' => 'text'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_button2_url_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_hero_button2_url_control',
+        array(
+          'label' => 'Second button url',
+          'section' => 'minakuva_hero_section',
+          'settings' => 'minakuva_hero_button2_url_setting',
+          'type' => 'url'
+        )
+      )
+    );
+
+/************Hero settings end *************/
 
     $wp_customize->add_section('minakuva_footer_section', array(
       'title' => 'Footer',
@@ -218,6 +346,40 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
       )
     );
 
+    $wp_customize->add_setting('minakuva_footer_shopbutton_text_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_shopbutton_text_control',
+        array(
+          'label' => 'Footer to shop button text',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_shopbutton_text_setting',
+          'type' => 'text'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_footer_shopbutton_url_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_shopbutton_url_control',
+        array(
+          'label' => 'Footer to shop button url',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_shopbutton_url_setting',
+          'type' => 'url'
+        )
+      )
+    );
+
     $wp_customize->add_setting('minakuva_footer_facebook_url_setting', array(
       //default value
     ));
@@ -251,6 +413,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
         )
       )
     );
+
 
   }
 } // endif function_exists( 'understrap_theme_customize_register' ).

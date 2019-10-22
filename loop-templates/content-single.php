@@ -11,39 +11,38 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+    <div class="entry-content">
+        <div class="wrapper" id="full-width-page-wrapper">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <div class="container" id="content">
 
-		<div class="entry-meta">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 content-area" id="primary">
 
-			<?php understrap_posted_on(); ?>
+                        <main class="site-main" id="main" role="main">
 
-		</div><!-- .entry-meta -->
+                            <?php the_title( '<h1 class="index-entry-title">', '</h1>' ); ?>
 
-	</header><!-- .entry-header -->
+                            <div class="entry-content">
+                                <?php the_content(); ?>
+                            </div>
+                                
+                        </main><!-- #main -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                    </div><!-- #primary -->
+                    <div class="col-md-1"></div>
 
-	<div class="entry-content">
+                </div><!-- .row end -->
 
-		<?php the_content(); ?>
+            </div><!-- #content -->
+        </div><!-- wrapper -->
+    </div><!-- .entry-content -->
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+    <footer class="entry-footer">
 
-	</div><!-- .entry-content -->
+        <?php understrap_entry_footer(); ?>
 
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
