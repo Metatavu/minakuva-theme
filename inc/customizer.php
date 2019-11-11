@@ -134,13 +134,13 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 
     $wp_customize->add_section('minakuva_hero_section', array(
       'title' => 'Hero',
-      'description'   => 'Update hero image'
+      'description'   => 'Update hero image and video'
     ));
 
     $wp_customize->add_setting('minakuva_hero_image_setting', array(
       //default value
     ));
-  
+
     $wp_customize->add_control(
       new WP_Customize_Image_Control(
         $wp_customize,
@@ -148,6 +148,22 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
         array(
           'label' => 'Edit hero image',
           'settings'  => 'minakuva_hero_image_setting',
+          'section'   => 'minakuva_hero_section'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_hero_video_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Upload_Control(
+        $wp_customize,
+        'minakuva_hero_vid_control',
+        array(
+          'label' => 'Edit hero video',
+          'settings'  => 'minakuva_hero_video_setting',
           'section'   => 'minakuva_hero_section'
         )
       )
