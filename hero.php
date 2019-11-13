@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 $heroImg = get_theme_mod( 'minakuva_hero_image_setting' );
+$heroVid = get_theme_mod( 'minakuva_hero_video_setting' );
 $heroTitle = get_theme_mod( 'minakuva_hero_title' );
 $heroText = get_theme_mod( 'minakuva_hero_text_setting' );
 $heroBtn1Text = get_theme_mod( 'minakuva_hero_button1_text_setting' );
@@ -21,7 +22,13 @@ $heroBtn2Url = get_theme_mod( 'minakuva_hero_button2_url_setting' );
 ?>
 
 <div class="wrapper" id="wrapper-hero">
-    <div class="hero-image-container" style="background:url(<?php echo esc_attr( $heroImg ); ?>);">
+    <div class="hero-image-container" style="z-index: 0;">
+    <div class="hero-video">
+        <video id="video" playsinline="playsinline" autoplay="autoplay" muted="muted" poster="<?php echo esc_attr( $heroImg ); ?>" style="width:100%; height:100%;">
+            <source src="<?php echo esc_attr( $heroVid ); ?>" type="video/mp4">
+        </video>
+    </div>
+
         <div class="hero-banner-content-container">
             <h1 class="hero-banner-title">
                 <?php echo esc_attr( $heroTitle ); ?>
