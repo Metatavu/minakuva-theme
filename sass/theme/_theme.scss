@@ -41,10 +41,10 @@ body {
   }
 }
 
-#wrapper-footer-full {
-  padding: 0;
+a:hover {
+    color: gray;
 }
-
+ 
 
 #main-menu.navbar-nav {
   .menu-item {
@@ -280,11 +280,11 @@ body {
     }
   }
 
-  .copyright-container {
+  .copyright-container, .footer-address{
     padding-top: 20px;
     text-align: center;
 
-    .copyright-text {
+    .copyright-text, .footer-address-text {
       font-size: 12px;
       color: #000;
     }

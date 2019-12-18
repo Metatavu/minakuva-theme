@@ -20,6 +20,8 @@ $footerBtnUrl = get_theme_mod('minakuva_footer_button_url_setting');
 $footerShopBtnUrl = get_theme_mod('minakuva_footer_shopbutton_url_setting');
 $footerFbUrl = get_theme_mod('minakuva_footer_facebook_url_setting');
 $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
+$footerAddressHeader = get_theme_mod('minakuva_footer_address_header_setting');
+$footerAddressText = get_theme_mod('minakuva_footer_address_text_setting');
 ?>
 
 <div class="wrapper" id="wrapper-footer">
@@ -54,6 +56,10 @@ $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
   <div class="<?php echo esc_attr( $container ); ?>">
     <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
     <div class="footer-credits-container">
+      <div class="footer-address">
+        <b class="footer-address-text"><?php echo esc_attr( $footerAddressHeader ); ?></b>
+        <p class="footer-address-text"><?php echo esc_attr( $footerAddressText ); ?><p>
+      </div>
       <div class="social-media-icons-container">
         <a href="<?php echo esc_attr( $footerFbUrl ); ?>">
           <span class="social-media-icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
