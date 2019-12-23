@@ -16,15 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php if ( is_front_page() ) : ?>
   <?php get_template_part('hero'); ?>
-<?php else : ?>
-  <div class="wrapper" id="wrapper-hero">
-    <div class="page-banner-content-container">
-      <div class="page-image-container" style="background:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>);">
-      <?php the_title('<h1 class="hero-banner-title">','</h1>');?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
+  <?php endif; ?>
 
 
 <div class="wrapper" id="full-width-page-wrapper">
@@ -32,16 +24,13 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="container" id="content">
 
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 content-area" id="primary">
+            <div class="content-area" id="primary">
 
                 <main class="site-main" id="main" role="main">
 
                     <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php if ( is_front_page() ) : ?>
-                        <?php the_title( '<h1 class="index-entry-title">', '</h1>' ); ?>
-                    <?php endif ?>	
+                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                         <div class="entry-content">
                             <?php the_content(); ?>
                         </div>
@@ -56,7 +45,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </main><!-- #main -->
 
             </div><!-- #primary -->
-            <div class="col-md-1"></div>
 
         </div><!-- .row end -->
 

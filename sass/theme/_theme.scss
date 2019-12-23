@@ -41,8 +41,13 @@ body {
   }
 }
 
-a:hover {
-    color: gray;
+.entry-content{ 
+  a {
+    color: rgb(255, 127, 48);
+  }
+  a:hover {
+    color: rgb(238, 111, 32);
+  }
 }
  
 
@@ -324,4 +329,8 @@ a:hover {
     line-height: 45px;
     text-align: center;
   }
+}
+
+#full-width-page-wrapper {
+  padding-top: 30px;
 }

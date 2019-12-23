@@ -19,16 +19,8 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
+<?php if ( is_front_page() ) : ?>
     <?php get_template_part( 'global-templates/hero' ); ?>
-    <?php else : ?>
-        <div class="wrapper" id="wrapper-hero">
-            <div class="page-banner-content-container">
-                <div class="page-image-container" style="background:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>);">
-                    <h1 class="page-entry-title"><?php the_title();?></h1>
-                </div>
-            </div>
-        </div>
 <?php endif; ?>
 
 <div class="wrapper" id="index-wrapper">
