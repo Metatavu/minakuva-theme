@@ -430,6 +430,40 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
       )
     );
 
+    $wp_customize->add_setting('minakuva_footer_address_header_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_address_header_control',
+        array(
+          'label' => 'Contacts header',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_address_header_setting',
+          'type' => 'text'
+        )
+      )
+    );
+
+    $wp_customize->add_setting('minakuva_footer_address_text_setting', array(
+      //default value
+    ));
+
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize,
+        'minakuva_footer_address_text_control',
+        array(
+          'label' => 'Contacts text',
+          'section' => 'minakuva_footer_section',
+          'settings' => 'minakuva_footer_address_text_setting',
+          'type' => 'textarea'
+        )
+      )
+    );
+
 
   }
 } // endif function_exists( 'understrap_theme_customize_register' ).

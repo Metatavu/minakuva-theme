@@ -20,33 +20,31 @@ $footerBtnUrl = get_theme_mod('minakuva_footer_button_url_setting');
 $footerShopBtnUrl = get_theme_mod('minakuva_footer_shopbutton_url_setting');
 $footerFbUrl = get_theme_mod('minakuva_footer_facebook_url_setting');
 $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
+$footerAddressHeader = get_theme_mod('minakuva_footer_address_header_setting');
+$footerAddressText = get_theme_mod('minakuva_footer_address_text_setting');
 ?>
 
 <div class="wrapper" id="wrapper-footer">
-
-  <div class="hero-footer-container" style="background: url(<?php echo esc_attr( $footerImg ); ?>);">
-    <div class="hero-footer-content-container">
-      <div class="container-narrow <?php echo esc_attr( $container ); ?>">
-      <div class="footer-grid-container">
-        <div class="footer-grid-item">
-            <h1 class="hero-footer-title">
-              <?php echo esc_attr( $footerText ); ?>
-            </h1>
-            <div class="hero-footer-button-container">
-              <?php if ( is_front_page() ) : ?>
-                <a href="<?php echo esc_attr( $footerBtnUrl ); ?>" class="btn btn-lg hero-footer-button btn-dark">
-                  <?php echo esc_attr( $footerBtnText ); ?></a>
-                <?php else : ?>
-                  <a href="<?php echo esc_attr( $footerShopBtnUrl ); ?>" class="btn btn-lg hero-footer-button btn-dark">
-                    <?php echo esc_attr( $footerShopBtnText ); ?></a>
-                <?php endif; ?>
-            </div>
-          </div>
+  <?php if ( is_front_page()) : ?>
+    <div class="hero-footer-container" style="background: url(<?php echo esc_attr( $footerImg ); ?>);">
+      <div class="hero-footer-content-container">
+        <div class="container-narrow <?php echo esc_attr( $container ); ?>">
+          <div class="footer-grid-container">
+            <div class="footer-grid-item">
+                <h1 class="hero-footer-title">
+                  <?php echo esc_attr( $footerText ); ?>
+                </h1>
+                <div class="hero-footer-button-container">
+                    <a href="<?php echo esc_attr( $footerBtnUrl ); ?>" class="btn btn-lg hero-footer-button btn-dark">
+                      <?php echo esc_attr( $footerBtnText ); ?></a>
+                </div>
+              </div>
             <div class="footer-grid-item">
           </div>
         </div>
       </div>
     </div>
+    <?php endif; ?>
   </div>
   <div class="container-fluid">
     <img class="footer-small-image" src="<?php echo esc_attr( $footerSmallImg ); ?>" />
@@ -54,6 +52,10 @@ $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
   <div class="<?php echo esc_attr( $container ); ?>">
     <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
     <div class="footer-credits-container">
+      <div class="footer-address">
+        <b class="footer-address-text"><?php echo esc_attr( $footerAddressHeader ); ?></b>
+        <p class="footer-address-text"><?php echo esc_attr( $footerAddressText ); ?><p>
+      </div>
       <div class="social-media-icons-container">
         <a href="<?php echo esc_attr( $footerFbUrl ); ?>">
           <span class="social-media-icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
