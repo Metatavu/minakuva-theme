@@ -23,31 +23,6 @@ $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
 ?>
 
 <div class="wrapper" id="wrapper-footer">
-
-  <div class="hero-footer-container" style="background: url(<?php echo esc_attr( $footerImg ); ?>);">
-    <div class="hero-footer-content-container">
-      <div class="container-narrow <?php echo esc_attr( $container ); ?>">
-      <div class="footer-grid-container">
-        <div class="footer-grid-item">
-            <h1 class="hero-footer-title">
-              <?php echo esc_attr( $footerText ); ?>
-            </h1>
-            <div class="hero-footer-button-container">
-              <?php if ( is_front_page() ) : ?>
-                <a href="<?php echo esc_attr( $footerBtnUrl ); ?>" class="btn btn-lg hero-footer-button btn-dark">
-                  <?php echo esc_attr( $footerBtnText ); ?></a>
-                <?php else : ?>
-                  <a href="<?php echo esc_attr( $footerShopBtnUrl ); ?>" class="btn btn-lg hero-footer-button btn-dark">
-                    <?php echo esc_attr( $footerShopBtnText ); ?></a>
-                <?php endif; ?>
-            </div>
-          </div>
-            <div class="footer-grid-item">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container-fluid">
     <img class="footer-small-image" src="<?php echo esc_attr( $footerSmallImg ); ?>" />
   </div>

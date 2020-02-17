@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
                         <main class="site-main" id="main" role="main">
 
-                            <?php the_title( '<h1 class="index-entry-title">', '</h1>' ); ?>
+                            <?php the_title( '<h1 class="post-entry-title">', '</h1>' ); ?>
 
                             <div class="entry-content">
                                 <?php the_content(); ?>

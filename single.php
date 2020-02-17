@@ -14,14 +14,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-    <div class="wrapper" id="wrapper-hero">
-        <div class="page-banner-content-container">
-            <div class="page-image-container" style="background:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>);">
-                <?php the_title('<h1 class="hero-banner-title-single">','</h1>');?>
-            </div>
-        </div>
-    </div>
-
     <div class="container" id="content" tabindex="-1">
 
         <div class="row">

@@ -7,6 +7,16 @@
   font-size: 30px;
 }
 
+.post-entry-title {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 0;
+  font-size: 60px;
+  line-height: 120px;
+  font-family: 'tahuregular';
+}
+
 .entry-content {
   font-size: 15px;
   padding-bottom: 15px;
@@ -143,14 +153,14 @@ body {
 }
 
 .hero-banner-title-single {
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'tahuregular';
   font-size: 70px;
   line-height: 130px;
-  color: #fff;
+  color: #000;
 }
 
 .hero-banner-title {
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'tahuregular';
   font-size: 110px;
   line-height: 130px;
   color: #fff;
