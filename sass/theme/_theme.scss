@@ -70,10 +70,66 @@ body {
       color: #000;
       font-size: 14px;
       font-weight: 400;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
+// SEARCH DROPDOWN //
+
+.is-menu.dropdown {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: #ececec;
+  }
+}
+.is-menu.dropdown form {
+  background: #f7f7f7;
+  padding: 1em 0.5em 1em 0.7em;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  min-width: 320px;
+  & .is-search-input {
+    padding: 6px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #d3ced2;
+    margin-right: 6px;
+  }
+  & .is-search-submit {
+    cursor: pointer;
+    color: #000;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+  
 .page-image-container {
   height: 400px;
   background-size:cover !important;
@@ -341,5 +397,123 @@ body {
     font-size: 45px;
     line-height: 45px;
     text-align: center;
+  }
+}
+
+// WOOCOMMERCE //
+
+.woocommerce-product-gallery__image {
+  cursor: crosshair;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.woocommerce ul.products li.product a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+}
+
+.woocommerce .quantity .qty {
+  padding: 6px;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #d3ced2;
+  width: 3.631em;
+  text-align: center;
+}
+.woocommerce-info {
+  border-top-color: #00cc96;
+  &::before {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00cc96;
+  }
+}
+.woocommerce-message {
+  border-top-color: #00cc96;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  @media (max-width: 670px){
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+  &::before {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00cc96;
+  }
+}
+
+.woocommerce a.added_to_cart {
+  padding-top: .5em;
+  display: inline-block;
+  color: #00cc96;
+}
+
+.woocommerce a.remove {
+  display: block;
+  font-size: 1.5em;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  line-height: 1;
+  border-radius: 100%;
+  color: #c72424 !important;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  &:hover {
+    background: #c72424;
+  }
+}
+
+.woocommerce a.button {
+  margin-left: 10px;
+  margin-right: 20px;
+  @media (max-width: 670px){
+    margin: 12px 0;
+  }
+  cursor: pointer;
+  color: #000;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.coupon {
+  display: flex;
+  justify-content: space-around;
+}
+
+#coupon_code.input-text {
+  @media (min-width: 769px) {
+    width: 320px !important;
   }
 }
