@@ -36,6 +36,9 @@ $footerInstaUrl = get_theme_mod('minakuva_footer_instagram_url_setting');
         <a href="<?php echo esc_attr( $footerInstaUrl ); ?>">
           <span class="social-media-icon"><i class="fa fa-instagram" aria-hidden="true"></i></span>
         </a>
+        <p style="font-size: 12px;">
+          <a style="color: #00cc96;" href="mailto:info@minakuva.com">info@minakuva.com</a>
+        </p>
       </div>
       <div class="copyright-container">
         <p class="copyright-text">© Minäkuva® 2019. Kaikki oikeudet pidätetään.</p>

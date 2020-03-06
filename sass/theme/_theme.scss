@@ -1,4 +1,23 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+.woocommerce {
+  .woocommerce-form-login.woocommerce-form.login {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .password-input {
+      display: block;
+      width: 100%;
+    }
+
+    .btn.btn-outline-primary {
+      width: 100%;
+    }
+  }
+}
+
+
 .index-entry-title {
   text-align: center;
   padding-top: 50px;
